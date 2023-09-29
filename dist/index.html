@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Vite App</title>
+    <script type="module" crossorigin src="/assets/index-90431dd8.js"></script>
+  </head>
+  <body>
+    <div id="canvasContainer">
+      <canvas id="paperCanvas" resize class="view"></canvas>
+      <div id="p5Canvas" resize class="view"></div>
+    </div>
+  </body>
+  <style>
+    /* Disable scrolling */
+    body {
+      overflow: hidden;
+    }
+
+    /* Scale canvas with resize attribute to full size */
+    #canvasContainer {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+      /* give a 2px light grey outline */
+      /*border: 2px solid #ddd;*/
+    }
+    #p5Canvas {
+      image-rendering: pixelated;
+    }
+    /* [resize] */
+    .view[resize] {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+    }
+  </style>
+  
+</html>
